@@ -19,6 +19,7 @@
 						class="hamburger-toggle"
 						data-toggle-class="#menu1;hidden-xs"
 						title="toggle menu for small screen"
+						aria-labelledby="toggle menu for small screen"
 					>
 						<i class="icon icon--sm stack-interface stack-menu"></i>
 					</a>

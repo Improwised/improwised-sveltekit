@@ -14,9 +14,5 @@ export default defineConfig({
 				}
 			}
 		},
-		// cssTarget: 'chrome61',
-		// minify: 'esbuild', // Minifies CSS and JS
-		// cssCodeSplit: true, // Splits CSS into separate files per chunk
-	},
-
+	}
 });
