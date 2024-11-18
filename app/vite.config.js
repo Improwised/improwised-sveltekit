@@ -1,6 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
-
 export default defineConfig({
 	plugins: [sveltekit()],
 	build: {
@@ -9,10 +8,11 @@ export default defineConfig({
 			output:{
 				manualChunks:(id) =>
 				{
-					return "appm-bundle";
+					return "app-bundle";
 
 				}
 			}
 		},
 	}
 });
+
