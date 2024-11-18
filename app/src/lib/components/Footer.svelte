@@ -1,8 +1,9 @@
-<footer class="py-14 bg-slate-100 border-t border-slate-100">
+<footer class="py-14 bg-white border-t border-slate-100">
     <div class="max-w-screen-xl mx-auto px-5">
       <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-        <div class="sm:col-span-2 md:col-span-3 lg:col-span-2"> <a href="/" class="text-lg flex items-center"><span
-              class="font-bold text-indigo-600 pr-2">Improwised</span><span class="text-slate-600">Technologies Pvt. Ltd.</span>
+        <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
+          <a href="/" class="text-lg flex items-center"><span
+              class="font-bold text-theme pr-2">Improwised</span><span class="text-slate-600">Technologies Pvt. Ltd.</span>
           </a>
           <p class="mt-4 text-sm text-slate-700 max-w-xs">
             Boost developer efficiency with platform engineering, delivering scalable internal developer platforms across cloud-native, hybrid, and multicloud architectures..
@@ -41,24 +42,24 @@
         </div>
         <div>
           <h3 class="font-medium text-sm text-slate-800">Company</h3>
-          <div class="flex flex-col mt-3"> <a href="/" class="py-2 text-sm text-slate-600 hover:text-indigo-600">
-              About </a><a href="/" class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Careers </a><a
-              href="/" class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Blog </a><a href="/"
-              class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Contact </a> </div>
+          <div class="flex flex-col mt-3"> <a href="/" class="py-2 text-sm text-slate-600 hover:text-theme">
+              About </a><a href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Careers </a><a
+              href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Blog </a><a href="/"
+              class="py-2 text-sm text-slate-600 hover:text-theme"> Contact </a> </div>
         </div>
         <div>
-          <h3 class="font-medium text-sm text-slate-800">Product</h3>
-          <div class="flex flex-col mt-3"> <a href="/" class="py-2 text-sm text-slate-600 hover:text-indigo-600"> For
-              Startups </a><a href="/" class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Features </a><a
-              href="/" class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Pricing </a><a href="/"
-              class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Integrations </a> </div>
+          <h3 class="font-medium text-sm text-slate-800">Services</h3>
+          <div class="flex flex-col mt-3"> <a href="/" class="py-2 text-sm text-slate-600 hover:text-theme">
+            Platform Engineering </a><a href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Cloud Infrastructure Services
+            </a><a
+              href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Product Modernization </a><a href="/"
+              class="py-2 text-sm text-slate-600 hover:text-theme"> Technology Consulting </a> </div>
         </div>
         <div>
-          <h3 class="font-medium text-sm text-slate-800">Resources</h3>
-          <div class="flex flex-col mt-3"> <a href="/" class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Help
-              Center </a><a href="/" class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Guides </a><a href="/"
-              class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Documentation </a><a href="/"
-              class="py-2 text-sm text-slate-600 hover:text-indigo-600"> Uptime Status </a> </div>
+          <h3 class="font-medium text-sm text-slate-800">Technologies</h3>
+          <div class="flex flex-col mt-3"> <a href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Golang </a><a href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Guides </a><a href="/"
+              class="py-2 text-sm text-slate-600 hover:text-theme"> Laravel </a><a href="/"
+              class="py-2 text-sm text-slate-600 hover:text-theme"> VueJs </a> </div>
         </div>
       </div>
     </div>
@@ -67,8 +68,8 @@
         <p class="text-center text-sm text-slate-600 [text-wrap:balance]">
           Copyright &copy; 2024 Improwised Technologies Pvt. Ltd.
         </p>
-        <p class="text-center text-xs text-slate-600 mt-2"> <a href="/" class="hover:text-indigo-500"> Terms</a> ・
-          <a href="/" class="hover:text-indigo-500">
+        <p class="text-center text-xs text-slate-600 mt-2"> <a href="/" class="hover:text-theme"> Terms</a> ・
+          <a href="/" class="hover:text-theme">
             Privacy</a> </p>
       </div>
     </div>
