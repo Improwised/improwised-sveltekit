@@ -222,3 +222,4 @@ window.addEventListener('scroll', () => {
   // Set the dot's position based on scroll progress
   dot.style.transform = `translateY(${scrollProgress * (sectionHeight - dot.offsetHeight)}px)`;
 });
+

@@ -1,8 +1,7 @@
 <script>
+	import { baseUrl } from '$lib/config';
 	import Card from '$lib/components/Card.svelte';
-	import { PUBLIC_BASE_URL } from "$env/static/public";
 
-    export const baseUrl = PUBLIC_BASE_URL
 	let gradientX1 = 45.5;
 	let gradientY1 = -200;
 	// Update gradient position relative to the specific card
@@ -44,7 +43,7 @@
 
 						<div class="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
 							<a
-								href="/"
+								href={baseUrl}
 								target="_blank"
 								rel="noopener"
 								class="focus-visible:shadow-outline-theme bg-grd-primary-600 hover:bg-theme-dark focus-visible:ring-theme flex items-center justify-center gap-1 rounded-full px-7 py-2.5 text-center text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 sm:self-center"
@@ -53,7 +52,7 @@
 							</a>
 
 							<a
-								href="/"
+								href={baseUrl}
 								rel="noopener"
 								target="_blank"
 								class="focus-visible:shadow-outline-theme gradient-button hover:bg-theme-light focus-visible:ring-theme ml-2 flex items-center justify-center gap-1 rounded-full border-2 px-7 py-2.5 text-center transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
@@ -1060,7 +1059,7 @@
 				</p>
 				<div class="mt-6 flex items-center gap-4">
 					<a
-						href="/"
+						href={baseUrl}
 						class="focus-visible:shadow-outline-green bg-theme hover:bg-grenn-800 group inline-flex items-center gap-px rounded-full px-4 py-2 text-center text-sm text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
 					>
 						<span>Get More</span>
@@ -1345,7 +1344,7 @@
 
 					<div class="mt-6 flex items-center gap-4">
 						<a
-							href="/"
+							href={baseUrl}
 							class="focus-visible:shadow-outline-green bg-theme group inline-flex items-center gap-px rounded-full px-4 py-2 text-center text-sm text-white transition hover:bg-green-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
 						>
 							<span>Visit Site</span>
@@ -1607,7 +1606,7 @@
 	</p>
 	<div class="mt-5 flex">
 		<a
-			href="/"
+			href={baseUrl}
 			class="focus-visible:shadow-outline-green rounded-full border-2 border-transparent bg-white px-7 py-2.5 text-center text-green-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
 			>Contact Us
 		</a>
