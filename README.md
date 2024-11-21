@@ -27,6 +27,14 @@ git clone git@github.com:Improwised/improwised-sveltekit.git
 cd app  
 ```
 
+## Build Setup
+
+* copy `.env.example` to `.env`. (skip if already done)
+
+```bash
+$ cp .env.example .env
+```
+
 ## Developing
 Installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
