@@ -1,30 +1,31 @@
 # Improwised-sveltekit
 
-## Live Preview : 
+## Live Preview :
 Link : https://improwised.github.io/improwised-sveltekit/
 
 ##  Description :
 - Here is a new design of the Improwised website.
-- The Lighthouse performance score is between 95 and 100%. 
-- It is a static website. 
-- I built this using SvelteKit and Tailwind CSS, 
-- Using this theme as a base: https://web3templates.com/templates/astroship-pro-astro-saas-website-template  
+- It contains other demo of design also.
+- The Lighthouse performance score is between 95 and 100%.
+- It is a static website.
+- I built this using SvelteKit and Tailwind CSS,
+- Using this theme as a base: https://web3templates.com/templates/astroship-pro-astro-saas-website-template
 
 ##  Doc Here :
-https://wiki.improwised.com/doc/svelte4-vs-svelte-5-UU1j7BjLEl  
-  
-  
+https://wiki.improwised.com/doc/svelte4-vs-svelte-5-UU1j7BjLEl
+
+
 ## Tools & Tech Stack
 
-Node version : 20.13.1  
-Svelte - 5.0.0  
-@sveltejs/kit - 2.0.0  
-  
+Node version : 20.13.1
+Svelte - 5.0.0
+@sveltejs/kit - 2.0.0
+
 ## Git Repo clone
 
 ```bash
-git clone git@github.com:Improwised/improwised-sveltekit.git 
-cd app  
+git clone git@github.com:Improwised/improwised-sveltekit.git
+cd app
 ```
 
 ## Build Setup
