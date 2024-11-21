@@ -1,7 +1,5 @@
 <script>
-	import { PUBLIC_BASE_URL } from '$env/static/public';
-
-	export const baseUrl = PUBLIC_BASE_URL;
+ import { baseUrl } from '$lib/config';
 </script>
 
 <header
@@ -14,7 +12,7 @@
 			data-impro-transition-scope="impro-o7bz76pi-1"
 		>
 			<div class="flex w-full items-center justify-between lg:w-auto">
-				<a href="/" class="logodefault -ml-2 flex items-center px-2 transition transition"
+				<a href={baseUrl} class="logodefault -ml-2 flex items-center px-2 transition transition"
 					><img
 						src={baseUrl + '/images/logo.png'}
 						class="logo"
@@ -55,7 +53,7 @@
 				<ul class="flex flex-col lg:flex-row lg:gap-3">
 					<li>
 						<a
-							href="/"
+							href={baseUrl}
 							class="active focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Home
@@ -63,7 +61,7 @@
 					</li>
 					<li>
 						<a
-							href="/home2"
+							href={baseUrl}
 							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							About Us
@@ -127,7 +125,7 @@
 
 					<li>
 						<a
-							href="/"
+							href={baseUrl}
 							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Case Studies
@@ -135,7 +133,7 @@
 					</li>
 					<li>
 						<a
-							href="/"
+							href={baseUrl}
 							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Careers
@@ -143,7 +141,7 @@
 					</li>
 					<li>
 						<a
-							href="/"
+							href={baseUrl}
 							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Blogs
@@ -179,10 +177,10 @@
 										class="flex flex-col px-3 lg:rounded-md lg:border lg:bg-white lg:py-2 lg:shadow"
 									>
 										<a
-										    href={baseUrl + '/home2'}
+											href={baseUrl + '/home2'}
 											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
 										>
-											Demo1
+											Version 1
 										</a>
 									</div>
 								</div>
@@ -201,7 +199,7 @@
 			<div>
 				<div class="hidden items-center gap-4 lg:flex">
 					<a
-						href="/"
+						href={baseUrl}
 						class="contactusbtn focus-visible:shadow-outline-theme text-md hover:bg-theme focus-visible:ring-theme group inline-flex items-center gap-px rounded-full border-2 px-4 py-2 text-center transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
 					>
 						<span>Contact Us</span>

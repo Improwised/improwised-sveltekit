@@ -1,13 +1,8 @@
 <script>
-   import { PUBLIC_BASE_URL } from "$env/static/public";
-
-    export const baseUrl = PUBLIC_BASE_URL
-
+    import { baseUrl } from '$lib/config';
 	import Header from "$lib/components/Header.svelte";
-
 	import Footer from "$lib/components/Footer.svelte";
 	import "../app.css";
-
 </script>
 
 <svelte:head>
@@ -40,8 +35,9 @@
 </svelte:head>
 
 <div class="app">
-	<Header />
+	<Header/>
 
+	<!-- svelte-ignore slot_element_deprecated -->
 	<main>
 		<slot />
 	</main>

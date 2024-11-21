@@ -1,14 +1,18 @@
+<script>
+	 import { baseUrl } from '$lib/config';
+</script>
+
 <footer class="py-14 bg-white border-t border-slate-100">
     <div class="max-w-screen-xl mx-auto px-5">
       <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
-          <a href="/" class="text-lg flex items-center"><span
-              class="font-bold text-theme pr-2">Improwised</span><span class="text-slate-600">Technologies Pvt. Ltd.</span>
+          <a href={baseUrl} class="text-lg flex items-center"><span
+              class="font-bold text-theme pr-1">Improwised</span><span class="text-slate-600">Technologies Pvt. Ltd.</span>
           </a>
-          <p class="mt-4 text-sm text-slate-700 max-w-xs">
+          <p class="mt-4 text-sm text-slate-600 max-w-xs">
             Boost developer efficiency with platform engineering, delivering scalable internal developer platforms across cloud-native, hybrid, and multicloud architectures..
           </p>
-          <div class="flex gap-3 mt-4 items-center"> <a href="/" target="_blank"
+          <div class="flex gap-3 mt-4 items-center"> <a href={baseUrl} target="_blank"
               rel="noopener noreferrer"
               class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
               <svg width="1em" height="1em" viewBox="0 0 24 24" class="w-4 h-4" data-icon="bx:bxl-twitter">
@@ -18,7 +22,7 @@
                     fill="currentColor"></path>
                 </symbol>
                 <use xlink:href="#ai:bx:bxl-twitter"></use>
-              </svg> <span class="sr-only">Twitter or X</span></a> <a href="/" target="_blank"
+              </svg> <span class="sr-only">Twitter or X</span></a> <a href={baseUrl} target="_blank"
               rel="noopener noreferrer"
               class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
               <svg width="1em" height="1em" viewBox="0 0 24 24" class="w-4 h-4" data-icon="bx:bxl-facebook-circle">
@@ -28,7 +32,7 @@
                     fill="currentColor"></path>
                 </symbol>
                 <use xlink:href="#ai:bx:bxl-facebook-circle"></use>
-              </svg><span class="sr-only">Facebook</span></a> <a href="/" target="_blank"
+              </svg><span class="sr-only">Facebook</span></a> <a href={baseUrl} target="_blank"
               rel="noopener noreferrer"
               class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
               <svg width="1em" height="1em" viewBox="0 0 24 24" class="w-4 h-4" data-icon="bx:bxl-linkedin-square">
@@ -42,23 +46,23 @@
         </div>
         <div>
           <h3 class="font-medium text-sm text-slate-800">Company</h3>
-          <div class="flex flex-col mt-3"> <a href="/" class="py-2 text-sm text-slate-600 hover:text-theme">
-              About </a><a href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Careers </a><a
-              href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Blog </a><a href="/"
+          <div class="flex flex-col mt-3"> <a href={baseUrl} class="py-2 text-sm text-slate-600 hover:text-theme">
+              About </a><a href={baseUrl} class="py-2 text-sm text-slate-600 hover:text-theme"> Careers </a><a
+              href={baseUrl} class="py-2 text-sm text-slate-600 hover:text-theme"> Blog </a><a href={baseUrl}
               class="py-2 text-sm text-slate-600 hover:text-theme"> Contact </a> </div>
         </div>
         <div>
           <h3 class="font-medium text-sm text-slate-800">Services</h3>
-          <div class="flex flex-col mt-3"> <a href="/" class="py-2 text-sm text-slate-600 hover:text-theme">
-            Platform Engineering </a><a href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Cloud Infrastructure Services
+          <div class="flex flex-col mt-3"> <a href={baseUrl} class="py-2 text-sm text-slate-600 hover:text-theme">
+            Platform Engineering </a><a href={baseUrl} class="py-2 text-sm text-slate-600 hover:text-theme"> Cloud Infrastructure Services
             </a><a
-              href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Product Modernization </a><a href="/"
+              href={baseUrl} class="py-2 text-sm text-slate-600 hover:text-theme"> Product Modernization </a><a href={baseUrl}
               class="py-2 text-sm text-slate-600 hover:text-theme"> Technology Consulting </a> </div>
         </div>
         <div>
           <h3 class="font-medium text-sm text-slate-800">Technologies</h3>
-          <div class="flex flex-col mt-3"> <a href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Golang </a><a href="/" class="py-2 text-sm text-slate-600 hover:text-theme"> Guides </a><a href="/"
-              class="py-2 text-sm text-slate-600 hover:text-theme"> Laravel </a><a href="/"
+          <div class="flex flex-col mt-3"> <a href={baseUrl} class="py-2 text-sm text-slate-600 hover:text-theme"> Golang </a><a href={baseUrl} class="py-2 text-sm text-slate-600 hover:text-theme"> Guides </a><a href={baseUrl}
+              class="py-2 text-sm text-slate-600 hover:text-theme"> Laravel </a><a href={baseUrl}
               class="py-2 text-sm text-slate-600 hover:text-theme"> VueJs </a> </div>
         </div>
       </div>
@@ -68,8 +72,8 @@
         <p class="text-center text-sm text-slate-600 [text-wrap:balance]">
           Copyright &copy; 2024 Improwised Technologies Pvt. Ltd.
         </p>
-        <p class="text-center text-xs text-slate-600 mt-2"> <a href="/" class="hover:text-theme"> Terms</a> ・
-          <a href="/" class="hover:text-theme">
+        <p class="text-center text-xs text-slate-600 mt-2"> <a href={baseUrl} class="hover:text-theme"> Terms</a> ・
+          <a href={baseUrl} class="hover:text-theme">
             Privacy</a> </p>
       </div>
     </div>
