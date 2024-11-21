@@ -1,0 +1,1 @@
+export const env={"PUBLIC_BASE_URL":"https://improwised.github.io/improwised-sveltekit"}
