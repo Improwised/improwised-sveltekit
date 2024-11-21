@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Production
 
 on:
   push:
@@ -8,6 +8,10 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: app
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -20,8 +24,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: copy env
+        run: cp .env.production .env
+
       - name: Build project
         env:
+          BASE_URL: ${{ vars.BASE_URL }}
           PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }} # Accessing the variable
         run: npm run build
 
