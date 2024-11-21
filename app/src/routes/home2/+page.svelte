@@ -1,13 +1,8 @@
 <script>
 	import Card from '$lib/components/Card.svelte';
-	 /* If need to use private env variable */
-	// export let data;
-	// let baseUrl = data.baseUrl;
-
 	import { PUBLIC_BASE_URL } from "$env/static/public";
 
     export const baseUrl = PUBLIC_BASE_URL
-
 	let gradientX1 = 45.5;
 	let gradientY1 = -200;
 	// Update gradient position relative to the specific card
