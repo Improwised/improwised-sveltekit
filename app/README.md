@@ -1,7 +1,8 @@
-# Sveltekit
+# Sveltekit App
 
 ### Version
 svelte - 5.0.0 & @sveltejs/kit - 2.0.0
+
 
 ## Developing
 
