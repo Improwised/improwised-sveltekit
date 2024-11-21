@@ -1379,7 +1379,7 @@ svg:not(:root) {
     background-image: url('../images/vertical-dotted-line.svg');
     background-repeat: no-repeat;
     content: "";
-    height: 128%;
+    height: 118%;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
