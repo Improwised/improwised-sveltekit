@@ -149,6 +149,46 @@
 							Blogs
 						</a>
 					</li>
+					<li class="relative isolate z-50">
+						<!-- svelte-ignore a11y_role_supports_aria_props_implicit -->
+						<menu class="impronav-dropdown group" aria-expanded="false">
+							<button
+								class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-slate-bold flex w-full items-center gap-1 rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:w-auto lg:px-3"
+							>
+								<span>Demos</span>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="3"
+									stroke="currentColor"
+									class="mt-0.5 h-3 w-3 group-open:rotate-180"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+									></path>
+								</svg>
+							</button>
+							<div class="impronav-dropdown dropdown-toggle hidden" aria-expanded="false">
+								<div
+									class="z-50 w-full origin-top-left border-l border-slate-200 lg:absolute lg:left-0 lg:w-48 lg:border-0"
+								>
+									<div
+										class="flex flex-col px-3 lg:rounded-md lg:border lg:bg-white lg:py-2 lg:shadow"
+									>
+										<a
+										    href={baseUrl + '/home2'}
+											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+										>
+											Demo1
+										</a>
+									</div>
+								</div>
+							</div>
+						</menu>
+					</li>
 				</ul>
 				<div class="mt-3 flex items-center gap-4 lg:hidden">
 					<a
