@@ -58,7 +58,7 @@
 							href="/"
 							class="active focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
-							Home
+							Homes
 						</a>
 					</li>
 					<li>
