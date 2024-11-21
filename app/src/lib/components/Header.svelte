@@ -1,5 +1,11 @@
+<script>
+	import { PUBLIC_BASE_URL } from '$env/static/public';
+
+	export const baseUrl = PUBLIC_BASE_URL;
+</script>
+
 <header
-	class="impronav-sticky-header sticky top-0 border-b z-20 transition-all py-5 border-transparent"
+	class="impronav-sticky-header sticky top-0 z-20 border-b border-transparent py-5 transition-all"
 	data-impro-cid-eo7fz7pr=""
 >
 	<div class="mx-auto max-w-screen-xl px-5">
@@ -8,15 +14,20 @@
 			data-impro-transition-scope="impro-o7bz76pi-1"
 		>
 			<div class="flex w-full items-center justify-between lg:w-auto">
-
-				<a href="/" class="-ml-2 flex items-center px-2 transition logodefault transition"
-					><img src="images/logo.png" class="logo" alt="logo" />
+				<a href="/" class="logodefault -ml-2 flex items-center px-2 transition transition"
+					><img
+						src={baseUrl + '/images/logo.png'}
+						class="logo"
+						alt="logo"
+						loading="lazy"
+						decoding="async"
+					/>
 				</a>
 				<div class="block lg:hidden">
 					<button id="impronav-menu" aria-label="Toggle Menu">
 						<svg
 							fill="currentColor"
-							class="h-4 w-4 text-white-800"
+							class="text-white-800 h-4 w-4"
 							width="24"
 							height="24"
 							viewBox="0 0 24 24"
@@ -40,20 +51,20 @@
 					</button>
 				</div>
 			</div>
-			<nav class="impronav-items impronav-toggle  mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
+			<nav class="impronav-items impronav-toggle mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
 				<ul class="flex flex-col lg:flex-row lg:gap-3">
 					<li>
 						<a
 							href="/"
-							class="active focus-visible:shadow-outline-indigo flex  rounded-full py-2 text-md text-slate-bold  transition hover:text-theme-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							class="active focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Home
 						</a>
 					</li>
 					<li>
 						<a
-							href="/"
-							class="focus-visible:shadow-outline-indigo flex rounded-full py-2 text-md text-slate-bold transition hover:text-theme-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							href="/home2"
+							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							About Us
 						</a>
@@ -62,7 +73,7 @@
 						<!-- svelte-ignore a11y_role_supports_aria_props_implicit -->
 						<menu class="impronav-dropdown group" aria-expanded="false">
 							<button
-								class="focus-visible:shadow-outline-indigo flex w-full items-center gap-1 rounded-full py-2 text-md text-slate-bold transition hover:text-slate-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:w-auto lg:px-3"
+								class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-slate-bold flex w-full items-center gap-1 rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:w-auto lg:px-3"
 							>
 								<span>Services</span>
 								<svg
@@ -89,32 +100,24 @@
 									>
 										<a
 											href="/"
-											class="focus-visible:shadow-outline-indigo rounded py-1 text-md text-slate-bold hover:text-theme-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
 										>
-
-										Platform Engineering
-
+											Platform Engineering
 										</a><a
 											href="/"
-											class="focus-visible:shadow-outline-indigo rounded py-1 text-md text-slate-bold hover:text-theme-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
 										>
-
-										Cloud Infrastructure Services
-
+											Cloud Infrastructure Services
 										</a><a
 											href="/"
-											class="focus-visible:shadow-outline-indigo rounded py-1 text-md text-slate-bold hover:text-theme-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
 										>
-
-										Product Modernization
-
+											Product Modernization
 										</a><a
 											href="/"
-											class="focus-visible:shadow-outline-indigo rounded py-1 text-md text-slate-bold hover:text-theme-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
 										>
-
-                                Technology Consulting
-
+											Technology Consulting
 										</a>
 									</div>
 								</div>
@@ -125,7 +128,7 @@
 					<li>
 						<a
 							href="/"
-							class="focus-visible:shadow-outline-indigo flex rounded-full py-2 text-md text-slate-bold transition hover:text-theme-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Case Studies
 						</a>
@@ -133,7 +136,7 @@
 					<li>
 						<a
 							href="/"
-							class="focus-visible:shadow-outline-indigo flex rounded-full py-2 text-md text-slate-bold transition hover:text-theme-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Careers
 						</a>
@@ -141,17 +144,16 @@
 					<li>
 						<a
 							href="/"
-							class="focus-visible:shadow-outline-indigo flex rounded-full py-2 text-md text-slate-bold transition hover:text-theme-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Blogs
 						</a>
 					</li>
-
 				</ul>
 				<div class="mt-3 flex items-center gap-4 lg:hidden">
 					<a
 						href="/"
-						class="contactusbtn focus-visible:shadow-outline-theme border-2 group w-full rounded-full px-5 py-2 text-center  transition hover:bg-theme-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2"
+						class="contactusbtn focus-visible:shadow-outline-theme hover:bg-theme-light focus-visible:ring-theme group w-full rounded-full border-2 px-5 py-2 text-center transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
 						>Contact Us
 					</a>
 				</div>
@@ -160,7 +162,7 @@
 				<div class="hidden items-center gap-4 lg:flex">
 					<a
 						href="/"
-						class="contactusbtn focus-visible:shadow-outline-theme group inline-flex items-center gap-px rounded-full border-2  px-4 py-2 text-center text-md transition hover:bg-theme focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme focus-visible:ring-offset-2"
+						class="contactusbtn focus-visible:shadow-outline-theme text-md hover:bg-theme focus-visible:ring-theme group inline-flex items-center gap-px rounded-full border-2 px-4 py-2 text-center transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
 					>
 						<span>Contact Us</span>
 						<svg
