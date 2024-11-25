@@ -226,6 +226,7 @@
 
 									<div class="flex flex-col shadow-lg lg:rounded-md lg:bg-white lg:py-2">
 
+										<!-- svelte-ignore a11y_invalid_attribute -->
 										<a
 											href="javascript:void(0)"
 											class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700"
@@ -241,6 +242,7 @@
 											>
 											Green
 										</a>
+										<!-- svelte-ignore a11y_invalid_attribute -->
 										<a
 											href="javascript:void(0)"
 											class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700"
