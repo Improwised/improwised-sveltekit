@@ -1390,7 +1390,11 @@
 
 	<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
 		<div class="lg:col-span-4">
-			<h2 class="text-4xl tracking-tight text-black md:text-6xl">Get in Touch <span class="text-theme">with Us</span></h2>
+
+			<h2 class="text-4xl font-bold lg:text-5xl lg:tracking-tight">
+				Get in Touch <span class="text-theme">with Us</span>
+			</h2>
+
 				<p class="mt-4 text-lg text-black/70 md:text-xl">
 					We will do our best to answer you within 24 hours or less.
 				</p>
