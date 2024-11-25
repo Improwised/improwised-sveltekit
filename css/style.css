@@ -1,8 +1,28 @@
 :root {
-    --theme-green-color: #00c16a;
-    --theme-color: rgb(0 193 106);
-    --theme-color-light: rgba(0, 193, 106, 0.1);
-    --theme-color-shadow: rgba(0, 193, 106, 0.3);
+    --color-primary-DEFAULT: var(--theme-green-color);
+    --theme-color-dark:  var(--theme-color-green-dark);
+    --theme-color: var(--theme-green-color);
+    --theme-bg-grediant1-color: var(--theme-green-bg-grediant1-color);
+    --theme-bg-grediant2-color: var(--theme-green-bg-grediant2-color);
+    --theme-bg-grediant3-color: var(--theme-green-bg-grediant3-color);
+    --theme-bg-grediant4-color: var(--theme-green-bg-grediant4-color);
+    --theme-bg-grediant5-color: var(--theme-green-bg-grediant5-color);
+
+    --theme-color-green-dark: #4a9e15;
+    --theme-green-color: #6cb33f;
+    --theme-green-bg-grediant1-color:rgba(108, 179, 63,0.1);
+    --theme-green-bg-grediant2-color:rgba(108, 179, 63,0.2);
+    --theme-green-bg-grediant3-color:rgba(108, 179, 63,0.3);
+    --theme-green-bg-grediant4-color: rgba(108, 179, 63,0.4);
+    --theme-green-bg-grediant5-color: rgba(108, 179, 63,0.5);
+
+    --theme-color-blue-dark: #119abc;
+    --theme-blue-color: #00afdb;
+    --theme-blue-bg-grediant1-color:rgba(0, 175, 219,0.1);
+    --theme-blue-bg-grediant2-color:rgba(0, 175, 219,0.2);
+    --theme-blue-bg-grediant3-color:rgba(0, 175, 219,0.3);
+    --theme-blue-bg-grediant4-color: rgba(0, 175, 219,0.4);
+    --theme-blue-bg-grediant5-color: rgba(0, 175, 219,0.5);
 }
 
 @font-face {
@@ -290,15 +310,15 @@ body {
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 15px #405bff
+        box-shadow: 0 0 15px var(--theme-color);
     }
 
     50% {
-        box-shadow: 0 0 30px #405BFF
+        box-shadow: 0 0 30px var(--theme-color);
     }
 
     100% {
-        box-shadow: 0 0 15px #405BFF;
+        box-shadow: 0 0 15px var(--theme-color);
     }
 }
 
@@ -331,21 +351,21 @@ body {
 
 @keyframes circle-ripple {
     0% {
-        box-shadow: 0 0 0 0 rgba(1, 109, 44, 0.3), 0 0 0 1em rgba(1, 109, 44, 0.3), 0 0 0 3em rgba(1, 109, 44, 0.3), 0 0 0 5em rgba(1, 109, 44, 0.3);
+        box-shadow: 0 0 0 0 var(--theme-bg-grediant1-color), 0 0 0 1em var(--theme-bg-grediant1-color), 0 0 0 3em var(--theme-bg-grediant1-color), 0 0 0 5em var(--theme-bg-grediant1-color);
     }
 
     100% {
-        box-shadow: 0 0 0 1em rgba(1, 109, 44, 0.3), 0 0 0 3em rgba(1, 109, 44, 0.3), 0 0 0 5em rgba(1, 109, 44, 0.3), 0 0 0 8em rgba(1, 109, 44, 0);
+        box-shadow: 0 0 0 1em var(--theme-bg-grediant1-color), 0 0 0 3em var(--theme-bg-grediant1-color), 0 0 0 5em var(--theme-bg-grediant1-color), 0 0 0 8em rgba(1, 109, 44, 0);
     }
 }
 
 @-webkit-keyframes circle-ripple {
     0% {
-        box-shadow: 0 0 0 0 rgba(1, 109, 44, 0.3), 0 0 0 1em rgba(1, 109, 44, 0.3), 0 0 0 3em rgba(1, 109, 44, 0.3), 0 0 0 5em rgba(1, 109, 44, 0.3);
+        box-shadow: 0 0 0 0 var(--theme-bg-grediant1-color), 0 0 0 1em var(--theme-bg-grediant1-color), 0 0 0 3em var(--theme-bg-grediant1-color), 0 0 0 5em var(--theme-bg-grediant1-color);
     }
 
     100% {
-        box-shadow: 0 0 0 1em rgba(1, 109, 44, 0.3), 0 0 0 3em rgba(1, 109, 44, 0.3), 0 0 0 5em rgba(1, 109, 44, 0.3), 0 0 0 8em rgba(1, 109, 44, 0);
+        box-shadow: 0 0 0 1em var(--theme-bg-grediant1-color), 0 0 0 3em var(--theme-bg-grediant1-color), 0 0 0 5em var(--theme-bg-grediant1-color), 0 0 0 8em rgba(1, 109, 44, 0);
     }
 }
 
@@ -428,14 +448,14 @@ body {
 .cursor-pointer {
     cursor: pointer
 }
-.from-green-200 {
-    --tw-gradient-from: #d8f5e2 var(--tw-gradient-from-position);
+.from-theme-green-200 {
+    --tw-gradient-from: var(--theme-bg-grediant2-color) var(--tw-gradient-from-position);
     --tw-gradient-to: rgb(199 239 254 / 0) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
 }
 
-.from-blues-200 {
-    --tw-gradient-from: #d8f5e2 var(--tw-gradient-from-position);
+.from-theme-green-100{
+    --tw-gradient-from: var(--theme-bg-grediant1-color) var(--tw-gradient-from-position);
     --tw-gradient-to: rgb(233 213 255 / 0) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
 }
@@ -740,7 +760,7 @@ body {
 
 .text-green-500 {
     --tw-text-opacity: 1;
-    color: rgb(34 197 94 / var(--tw-text-opacity))
+    color: rgb(108 179 63 / var(--tw-text-opacity))
 }
 
 .text-indigo-500 {
@@ -1141,7 +1161,7 @@ details>summary.list-none::marker {
     border: 1px solid transparent;
 
     background: linear-gradient(white, white) padding-box,
-        linear-gradient(90deg, var(--theme-green-color), var(--theme-color)) border-box;
+        linear-gradient(90deg, var(--theme-color-dark), var(--theme-color)) border-box;
 
     color: var(--theme-color);
 
@@ -1152,7 +1172,7 @@ details>summary.list-none::marker {
 }
 
 .gradient-button:hover {
-    background: linear-gradient(90deg, var(--theme-green-color), var(--theme-color));
+    background: linear-gradient(90deg, var(--theme-color-dark), var(--theme-color));
     color: white;
 }
 
@@ -1175,15 +1195,29 @@ details>summary.list-none::marker {
 }
 
 .bg-theme-light {
-    background-color: var(--theme-color-light);
+    background-color: var(--theme-bg-grediant5-color);
 }
 
 .focus-visible\:shadow-outline-theme:focus-visible {
-    box-shadow: 0 0 0 4px var(--theme-color-shadow);
+    box-shadow: 0 0 0 4px var(--theme-bg-grediant4-color);
+}
+.hover\:bg-theme-800:hover {
+    background-color: var(--theme-color-dark);
 }
 
 .focus-visible\:ring-theme:focus-visible {
     outline-color: var(--theme-color);
+}
+
+.focus-visible\:ring-theme-500:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: var(--theme-color);
+}
+
+.focus-visible\:ring-2:focus-visible {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
 /* Custom classes using theme variables */
@@ -1200,7 +1234,7 @@ details>summary.list-none::marker {
 }
 .bg-theme-100 {
     --tw-bg-opacity: 1;
-    background-color: rgb(231 251 242 / var(--tw-bg-opacity))
+    background-color: var(--theme-bg-grediant1-color)
 }
 
 .bg-image-custom {
@@ -1268,12 +1302,21 @@ svg:not(:root) {
     animation: circle-ripple 3s linear linear infinite;
     -webkit-animation: circle-ripple 3s linear infinite;
 }
-
-.btn-down {
+.div-ripple {
     position: absolute;
+    bottom: 50%;
+    left: 75%;
+    right: 0;
+    border-radius: 50%;
+    animation: circle-ripple 3s linear linear infinite;
+    -webkit-animation: circle-ripple 3s linear infinite;
+}
+.btn-down {
+    /* position: absolute;
     bottom: 60px;
     left: 50%;
-    border-radius: 50%;
+    border-radius: 50%; */
+
     animation: circle-ripple 3s linear linear infinite;
     -webkit-animation: circle-ripple 3s linear infinite;
 }
@@ -1356,7 +1399,7 @@ svg:not(:root) {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 5px solid rgb(64, 91, 255);
+    border: 5px solid var(--theme-color);
     border-radius: 50%;
     animation: grow-shrink 2s infinite;
 }
@@ -1391,9 +1434,9 @@ svg:not(:root) {
 
 .card-custom {
 
-    background: radial-gradient(135px circle at var(--gradient-x, 15px) var(--gradient-y, 30px), rgba(180, 245, 215, 0.5) 0, transparent 100%);
+    background: radial-gradient(135px circle at var(--gradient-x, 15px) var(--gradient-y, 30px), var(--theme-bg-grediant2-color) 0, transparent 100%);
     border: 2px solid transparent;
-    border-image: radial-gradient(circle at var(--gradient-x, 15px) var(--gradient-y, 30px), rgba(0, 193, 106, 0.7), rgba(255, 255, 255, 0.5)) 1;
+    border-image: radial-gradient(circle at var(--gradient-x, 15px) var(--gradient-y, 30px), var(--theme-color), rgba(255, 255, 255, 0.5)) 1;
     transition: border-image 0.3s ease;
 }
 
@@ -1401,7 +1444,7 @@ svg:not(:root) {
 
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
-    border-image: radial-gradient(circle at var(--gradient-x, 15px) var(--gradient-y, 30px), rgba(0, 193, 106, 0.9), transparent 100%) 1;
+    border-image: radial-gradient(circle at var(--gradient-x, 15px) var(--gradient-y, 30px),  var(--theme-color), transparent 100%) 1;
 
 }
 
@@ -1419,7 +1462,7 @@ svg:not(:root) {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
     background: #fff;
     ;
-    border-image: radial-gradient(circle at var(--gradient-x, 15px) var(--gradient-y, 30px), rgba(0, 193, 106, 0.9) 0, transparent 100%) 1;
+    border-image: radial-gradient(circle at var(--gradient-x, 15px) var(--gradient-y, 30px), var(--theme-color) 0, transparent 100%) 1;
 
 }
 /*WhatWeAreInBest Section*/
@@ -1494,4 +1537,8 @@ svg:not(:root) {
 
 .logosInfiniteScrolling:hover {
     animation-play-state: paused;
+}
+
+.bg-gradient-to-b {
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
