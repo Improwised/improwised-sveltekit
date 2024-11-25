@@ -357,7 +357,7 @@
 </div>
 
 <div class="mx-auto max-w-screen-xl px-5 py-10 ">
-	<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
+	<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-5 px-5">
 		<div class="lg:col-span-2">
 			<span
 				class="border-theme bg-theme-100 text-theme rounded-full border px-3 py-1 text-xs font-medium"
@@ -779,7 +779,8 @@
 						Platform Engineering
 					</span>
 					<h2 class="mt-4 text-4xl font-bold [text-wrap:balance] lg:text-5xl lg:tracking-tight">
-						What we are best in
+						What we are <span class="text-theme">best in</span>
+
 					</h2>
 					<p class="mt-4 text-lg text-slate-600 [text-wrap:pretty]">
 						Unlock Maximum Cloud Performance with Streamlined Infrastructure Solutions.
@@ -1401,7 +1402,7 @@
 		>
 		<!-- <div class="div-ripple"></div> -->
 
-		<div class="mt-10 text-right">
+		<div class="mt-10 text-right ctn-btn">
 			<a
 				href={baseUrl}
 				class="focus-visible:shadow-outline-theme rounded-full border-2 border-transparent bg-theme px-7 py-2.5 text-center text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 btn-down"

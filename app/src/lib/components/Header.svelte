@@ -69,7 +69,7 @@
 					</li>
 					<li class="relative isolate z-50">
 						<!-- svelte-ignore a11y_role_supports_aria_props_implicit -->
-						<menu class="impronav-dropdown group" aria-expanded="false">
+						<menu class="impronav-dropdown group">
 							<button
 								class="focus-visible:shadow-outline-theme text-md text-slate-bold hover:text-slate-bold flex w-full items-center gap-1 rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 lg:w-auto lg:px-3"
 							>
@@ -89,7 +89,7 @@
 									></path>
 								</svg>
 							</button>
-							<div class="impronav-dropdown dropdown-toggle hidden" aria-expanded="false">
+							<div class="impronav-dropdown dropdown-toggle hidden">
 								<div
 									class="z-50 mt-2 w-56 w-full origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none lg:absolute lg:left-0 lg:w-48"
 								>
@@ -144,7 +144,7 @@
 					</li>
 					<li class="relative isolate z-50">
 						<!-- svelte-ignore a11y_role_supports_aria_props_implicit -->
-						<menu class="impronav-dropdown group" aria-expanded="false">
+						<menu class="impronav-dropdown group">
 							<button
 								class="focus-visible:shadow-outline-theme text-md text-slate-bold hover:text-slate-bold flex w-full items-center gap-1 rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 lg:w-auto lg:px-3"
 							>
@@ -164,7 +164,7 @@
 									></path>
 								</svg>
 							</button>
-							<div class="impronav-dropdown dropdown-toggle hidden" aria-expanded="false">
+							<div class="impronav-dropdown dropdown-toggle hidden">
 								<div
 									class="z-50 mt-2 w-56 w-full origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none lg:absolute lg:left-0 lg:w-48"
 								>
@@ -198,7 +198,7 @@
 			<div>
 				<div class="hidden items-center gap-4 lg:flex">
 					<div class="relative isolate z-50">
-						<menu class="impronav-dropdown group" aria-expanded="false">
+						<menu class="impronav-dropdown group">
 							<!-- svelte-ignore a11y_consider_explicit_label -->
 							<button class=""
 								><span
@@ -219,7 +219,7 @@
 									></span
 								></button
 							>
-							<div class="impronav-dropdown dropdown-toggle hidden" aria-expanded="false">
+							<div class="impronav-dropdown dropdown-toggle hidden">
 								<div
 									class="w-46 z-50 mt-2 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none lg:absolute lg:left-0 lg:w-48"
 								>
