@@ -316,7 +316,7 @@
 					</div>
 					<div>
 						<div class="mb-2 text-sm uppercase tracking-wide">Clients</div>
-						<div class="mb-4 text-2xl font-medium [text-wrap:balance]">120+ Worldwide</div>
+						<div class="mb-4 text-2xl font-medium [text-wrap:balance]">20+ Worldwide</div>
 					</div>
 				</div>
 			</div>
