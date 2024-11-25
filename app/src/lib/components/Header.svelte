@@ -1,5 +1,5 @@
 <script>
- import { baseUrl } from '$lib/config';
+	import { baseUrl } from '$lib/config';
 </script>
 
 <header
@@ -54,7 +54,7 @@
 					<li>
 						<a
 							href={baseUrl}
-							class="active focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							class="active focus-visible:shadow-outline-theme text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Home
 						</a>
@@ -62,7 +62,7 @@
 					<li>
 						<a
 							href={baseUrl}
-							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							class="focus-visible:shadow-outline-theme text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							About Us
 						</a>
@@ -71,7 +71,7 @@
 						<!-- svelte-ignore a11y_role_supports_aria_props_implicit -->
 						<menu class="impronav-dropdown group" aria-expanded="false">
 							<button
-								class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-slate-bold flex w-full items-center gap-1 rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:w-auto lg:px-3"
+								class="focus-visible:shadow-outline-theme text-md text-slate-bold hover:text-slate-bold flex w-full items-center gap-1 rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 lg:w-auto lg:px-3"
 							>
 								<span>Services</span>
 								<svg
@@ -91,29 +91,24 @@
 							</button>
 							<div class="impronav-dropdown dropdown-toggle hidden" aria-expanded="false">
 								<div
-									class="z-50 w-full origin-top-left border-l border-slate-200 lg:absolute lg:left-0 lg:w-48 lg:border-0"
+									class="z-50 mt-2 w-56 w-full origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none lg:absolute lg:left-0 lg:w-48"
 								>
-									<div
-										class="flex flex-col px-3 lg:rounded-md lg:border lg:bg-white lg:py-2 lg:shadow"
-									>
-										<a
-											href="/"
-											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
-										>
+									<div class="flex flex-col shadow-lg lg:rounded-md lg:bg-white lg:py-2">
+										<a href="/" class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700">
 											Platform Engineering
 										</a><a
 											href="/"
-											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+											class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700"
 										>
 											Cloud Infrastructure Services
 										</a><a
 											href="/"
-											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+											class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700"
 										>
 											Product Modernization
 										</a><a
 											href="/"
-											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+											class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700"
 										>
 											Technology Consulting
 										</a>
@@ -126,7 +121,7 @@
 					<li>
 						<a
 							href={baseUrl}
-							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							class="focus-visible:shadow-outline-theme text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Case Studies
 						</a>
@@ -134,7 +129,7 @@
 					<li>
 						<a
 							href={baseUrl}
-							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							class="focus-visible:shadow-outline-theme text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Careers
 						</a>
@@ -142,7 +137,7 @@
 					<li>
 						<a
 							href={baseUrl}
-							class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:px-3"
+							class="focus-visible:shadow-outline-theme text-md text-slate-bold hover:text-theme-600 flex rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 lg:px-3"
 						>
 							Blogs
 						</a>
@@ -151,7 +146,7 @@
 						<!-- svelte-ignore a11y_role_supports_aria_props_implicit -->
 						<menu class="impronav-dropdown group" aria-expanded="false">
 							<button
-								class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-slate-bold flex w-full items-center gap-1 rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 lg:w-auto lg:px-3"
+								class="focus-visible:shadow-outline-theme text-md text-slate-bold hover:text-slate-bold flex w-full items-center gap-1 rounded-full py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 lg:w-auto lg:px-3"
 							>
 								<span>Demos</span>
 								<svg
@@ -171,16 +166,20 @@
 							</button>
 							<div class="impronav-dropdown dropdown-toggle hidden" aria-expanded="false">
 								<div
-									class="z-50 w-full origin-top-left border-l border-slate-200 lg:absolute lg:left-0 lg:w-48 lg:border-0"
+									class="z-50 mt-2 w-56 w-full origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none lg:absolute lg:left-0 lg:w-48"
 								>
-									<div
-										class="flex flex-col px-3 lg:rounded-md lg:border lg:bg-white lg:py-2 lg:shadow"
-									>
+									<div class="flex flex-col shadow-lg lg:rounded-md lg:bg-white lg:py-2">
+										<a
+											href={baseUrl}
+											class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700"
+										>
+											Version 1.1
+										</a>
 										<a
 											href={baseUrl + '/home2'}
-											class="focus-visible:shadow-outline-indigo text-md text-slate-bold hover:text-theme-600 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+											class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700"
 										>
-											Version 1
+											Version 1.0
 										</a>
 									</div>
 								</div>
@@ -198,6 +197,72 @@
 			</nav>
 			<div>
 				<div class="hidden items-center gap-4 lg:flex">
+					<div class="relative isolate z-50">
+						<menu class="impronav-dropdown group" aria-expanded="false">
+							<!-- svelte-ignore a11y_consider_explicit_label -->
+							<button class=""
+								><span
+									><svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="h-6 w-6"
+										><path
+											d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+											class="fill-slate-400/20 stroke-slate-500"
+										></path><path
+											d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
+											class="stroke-slate-500"
+										></path></svg
+									></span
+								></button
+							>
+							<div class="impronav-dropdown dropdown-toggle hidden" aria-expanded="false">
+								<div
+									class="w-46 z-50 mt-2 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none lg:absolute lg:left-0 lg:w-48"
+								>
+
+									<div class="flex flex-col shadow-lg lg:rounded-md lg:bg-white lg:py-2">
+
+										<a
+											href="javascript:void(0)"
+											class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700"
+											on:click={changeThemeColor('green')}
+										>
+											<button
+												type="button"
+												class="items-center  rounded-md pr-1"
+												><!----><span
+													class="inline-block h-3 w-3 rounded-full"
+													style="background-color: #6CB33F;"
+												></span></button
+											>
+											Green
+										</a>
+										<a
+											href="javascript:void(0)"
+											class="hover:text-theme-600 block px-4 py-2 text-sm text-gray-700"
+
+											 on:click={changeThemeColor('blue')}
+										>
+											<button
+												type="button"
+												class="items-center  rounded-md pr-1"
+												><!----><span
+													class="inline-block h-3 w-3 rounded-full"
+													style="background-color: #00AFDB;"
+												></span></button
+											>
+											Blue
+										</a>
+									</div>
+								</div>
+							</div>
+						</menu>
+					</div>
+
 					<a
 						href={baseUrl}
 						class="contactusbtn focus-visible:shadow-outline-theme text-md hover:bg-theme focus-visible:ring-theme group inline-flex items-center gap-px rounded-full border-2 px-4 py-2 text-center transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
@@ -216,6 +281,7 @@
 							></path>
 						</svg>
 					</a>
+					<!-- svelte-ignore a11y_consider_explicit_label -->
 				</div>
 			</div>
 		</div>

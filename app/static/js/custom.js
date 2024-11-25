@@ -223,3 +223,34 @@ window.addEventListener('scroll', () => {
   dot.style.transform = `translateY(${scrollProgress * (sectionHeight - dot.offsetHeight)}px)`;
 });
 
+function changeThemeColor(color) {
+  const root = document.documentElement;
+  if (color === 'blue') {
+    root.style.setProperty('--theme-color', 'var(--theme-blue-color)');
+    root.style.setProperty('--theme-color-dark', 'var(--theme-color-blue-dark)');
+    root.style.setProperty('--theme-bg-grediant1-color', 'var(--theme-blue-bg-grediant1-color)');
+    root.style.setProperty('--theme-bg-grediant2-color', 'var(--theme-blue-bg-grediant2-color)');
+    root.style.setProperty('--theme-bg-grediant3-color', 'var(--theme-blue-bg-grediant3-color)');
+    root.style.setProperty('--theme-bg-grediant4-color', 'var(--theme-blue-bg-grediant4-color)');
+    root.style.setProperty('--theme-bg-grediant5-color', 'var(--theme-blue-bg-grediant5-color)');
+    root.style.setProperty('--color-primary-DEFAULT', 'var(--theme-blue-color)');
+  } else if (color === 'green') {
+    root.style.setProperty('--theme-color', 'var(--theme-green-color)');
+    root.style.setProperty('--theme-color-dark', 'var(--theme-color-green-dark)');
+    root.style.setProperty('--theme-bg-grediant1-color', 'var(--theme-green-bg-grediant1-color)');
+    root.style.setProperty('--theme-bg-grediant2-color', 'var(--theme-green-bg-grediant2-color)');
+    root.style.setProperty('--theme-bg-grediant3-color', 'var(--theme-green-bg-grediant3-color)');
+    root.style.setProperty('--theme-bg-grediant4-color', 'var(--theme-green-bg-grediant4-color)');
+    root.style.setProperty('--theme-bg-grediant5-color', 'var(--theme-green-bg-grediant5-color)');
+    root.style.setProperty('--color-primary-DEFAULT', 'var(--theme-green-color)');
+  }
+  localStorage.setItem('themeColor', color); // Save selection in localStorage
+}
+
+// Apply the theme color on page load
+window.onload = function () {
+  const savedColor = localStorage.getItem('themeColor');
+  if (savedColor) {
+    changeThemeColor(savedColor); // Apply the saved theme color
+  }
+};
