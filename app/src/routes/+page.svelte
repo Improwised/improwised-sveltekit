@@ -18,10 +18,10 @@
 				<div class="mx-auto my-5 px-5 pt-[15%] text-center md:w-2/3 lg:w-5/6 xl:w-full">
 					<main class="relative place-items-center">
 						<div
-							class="bg-gradient-radial from-blues-200 absolute right-0 top-0 -z-10 h-96 w-96 blur-2xl"
+							class="bg-gradient-radial from-theme-green-100 absolute right-0 top-0 -z-10 h-96 w-96 blur-2xl"
 						></div>
 						<div
-							class="bg-gradient-radial absolute right-36 top-10 -z-10 h-96 w-96 from-green-200 blur-2xl"
+							class="bg-gradient-radial absolute right-36 top-10 -z-10 h-96 w-96 from-theme-green-200 blur-2xl"
 						></div>
 
 						<h2
@@ -110,7 +110,7 @@
 					cx="0"
 					cy="0"
 					r="8"
-					fill="#00c16a"
+					fill="var(--theme-color)"
 					filter="url(#drop-shadow)"
 				>
 					<animateMotion repeatCount="indefinite" dur="5s">
@@ -123,7 +123,7 @@
 					cx="0"
 					cy="0"
 					r="8"
-					fill="#00c16a"
+					fill="var(--theme-color)"
 					filter="url(#drop-shadow)"
 				>
 					<animateMotion repeatCount="indefinite" dur="10s">
@@ -136,7 +136,7 @@
 					cx="0"
 					cy="0"
 					r="8"
-					fill="#00c16a"
+					fill="var(--theme-color)"
 					filter="url(#drop-shadow)"
 				>
 					<animateMotion repeatCount="indefinite" dur="5s">
@@ -149,7 +149,7 @@
 					cx="0"
 					cy="0"
 					r="8"
-					fill="#00c16a"
+					fill="var(--theme-color)"
 					filter="url(#drop-shadow)"
 				>
 					<animateMotion repeatCount="indefinite" dur="5s">
@@ -162,7 +162,7 @@
 					cx="0"
 					cy="0"
 					r="8"
-					fill="#00c16a"
+					fill="var(--theme-color)"
 					filter="url(#drop-shadow)"
 				>
 					<animateMotion repeatCount="indefinite" dur="5s">
@@ -175,7 +175,7 @@
 					cx="0"
 					cy="0"
 					r="8"
-					fill="#00c16a"
+					fill="var(--theme-color)"
 					filter="url(#drop-shadow)"
 				>
 					<animateMotion repeatCount="indefinite" dur="5s">
@@ -188,7 +188,7 @@
 					cx="0"
 					cy="0"
 					r="8"
-					fill="#00c16a"
+					fill="var(--theme-color)"
 					filter="url(#drop-shadow)"
 				>
 					<animateMotion repeatCount="indefinite" dur="5s">
@@ -201,7 +201,7 @@
 					cx="0"
 					cy="0"
 					r="8"
-					fill="#00c16a"
+					fill="var(--theme-color)"
 					filter="url(#drop-shadow)"
 				>
 					<animateMotion repeatCount="indefinite" dur="5s">
@@ -375,7 +375,7 @@
 			<div class="mt-6 flex items-center gap-4">
 				<a
 					href={baseUrl}
-					class="focus-visible:shadow-outline-green bg-theme hover:bg-grenn-800 group inline-flex items-center gap-px rounded-full px-4 py-2 text-center text-sm text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+					class="focus-visible:shadow-outline-themr bg-theme hover:bg-theme-800 group inline-flex items-center gap-px rounded-full px-4 py-2 text-center text-sm text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2"
 				>
 					<span>Get More</span>
 					<svg
@@ -412,7 +412,7 @@
 
 				<!-- svelte-ignore a11y_img_redundant_alt -->
 				<img
-					src={baseUrl + '/images/dashboard1.png'}
+					src={baseUrl + '/images/integrations.svg'}
 					alt="Fea</picture>ture image"
 					class="h-full w-full object-contain"
 					loading="lazy"
@@ -443,7 +443,7 @@
 
 				<!-- svelte-ignore a11y_img_redundant_alt -->
 				<img
-					src={baseUrl + '/images/dashboard1.png'}
+					src={baseUrl + '/images/integrations.svg'}
 					alt="Feature image"
 					class="h-full w-full object-contain"
 					loading="lazy"
@@ -474,7 +474,7 @@
 
 				<!-- svelte-ignore a11y_img_redundant_alt -->
 				<img
-					src={baseUrl + '/images/dashboard2.png'}
+					src={baseUrl + '/images/integrations.svg'}
 					alt="Feature image"
 					class="h-full w-full object-contain"
 					loading="lazy"
@@ -796,7 +796,7 @@
 							>
 								<symbol id="ai:ph:check-circle-fill">
 									<path
-										fill="#00c16a"
+										fill="var(--theme-color)"
 										d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m45.66 85.66l-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32L112 148.69l50.34-50.35a8 8 0 0 1 11.32 11.32"
 									>
 									</path>
@@ -831,7 +831,7 @@
 					<div class="mt-6 flex items-center gap-4">
 						<a
 							href={baseUrl}
-							class="focus-visible:shadow-outline-green bg-theme group inline-flex items-center gap-px rounded-full px-4 py-2 text-center text-sm text-white transition hover:bg-green-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+							class="focus-visible:shadow-outline-theme bg-theme group inline-flex items-center gap-px rounded-full px-4 py-2 text-center text-sm text-white transition hover:bg-theme-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2"
 						>
 							<span>Visit Site</span>
 							<svg
@@ -849,28 +849,22 @@
 						</a>
 					</div>
 					<!-- svelte-ignore a11y_img_redundant_alt -->
-					<img
-						src={baseUrl + '/images/dashboard3.png'}
-						alt="Feature Image"
-						loading="lazy"
-						width="730"
-						height="584"
-						decoding="async"
-					/>
-				</div>
-			</div>
-			<div class="grid place-items-end">
-				<!-- svelte-ignore a11y_img_redundant_alt -->
 
-				<div class="styles-module--right">
-					<img
-						class="styles-module--mainImage"
-						src={baseUrl + '/images/Performance.svg'}
-						alt="Improwised"
-						loading="lazy"
-					/>
 				</div>
 			</div>
+			<div class="grid place-items-end px-5 py-10">
+
+				<!-- svelte-ignore a11y_img_redundant_alt -->
+				<div class="styles-module--right mt-5">
+
+				   <img
+					   class="styles-module--mainImage"
+					   src={baseUrl + '/images/integrations.svg'}
+					   alt="Improwised tech"
+					   loading="lazy"
+				   />
+				   </div>
+			 </div>
 		</div>
 	</div>
 </div>
@@ -893,10 +887,10 @@
 	</div>
 	<div class="relative overflow-x-clip">
 		<div
-			class="bg-gradient-radial from-blues-100 absolute -top-10 right-1/3 -z-10 h-96 w-96 blur-2xl"
+			class="bg-gradient-radial from-theme-green-200 absolute -top-10 right-1/3 -z-10 h-96 w-96 blur-2xl"
 		></div>
 		<div
-			class="bg-gradient-radial absolute right-1/3 top-10 -z-10 h-96 w-96 translate-x-2/3 from-green-100 blur-2xl"
+			class="bg-gradient-radial absolute right-1/3 top-10 -z-10 h-96 w-96 translate-x-2/3 from-theme-green-100 blur-2xl"
 		></div>
 		<div class="group relative gap-10 overflow-hidden py-5 md:flex">
 			<div
@@ -1377,18 +1371,48 @@
 		</div>
 	</div>
 </div>
+
+
 <div
-	class="flex flex-col items-center bg-gradient-to-bl from-green-900 to-green-700 px-5 py-10 text-center md:px-20 md:py-20"
+	class="bg-gradient-to-b from-gray-50 dark:from-gray-950/50 to-white dark:to-gray-900 relative px-5 py-10  md:px-20 md:py-20
+
+	"
 >
-	<h2 class="text-4xl tracking-tight text-white md:text-6xl">Get in Touch with Us</h2>
-	<p class="mt-4 text-lg text-white/70 md:text-xl">
-		We will do our best to answer you within 24 hours or less.
-	</p>
-	<div class="mt-5 flex">
-		<a
-			href={baseUrl}
-			class="focus-visible:shadow-outline-green rounded-full border-2 border-transparent bg-white px-7 py-2.5 text-center text-green-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
-			>Book a Call
-		</a>
+
+
+<svg viewBox="0 0 1440 181" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute inset-x-0 top-0 w-full block" data-v-baf90ddd=""><mask id="path-1-inside-1_1086_7239" fill="white"><path d="M0 0H1440V181H0V0Z"></path></mask><path d="M0 0H1440V181H0V0Z" fill="url(#paint0_linear_1086_7239)" fill-opacity="0.22"></path><path d="M0 2H1440V-2H0V2Z" fill="url(#paint1_linear_1086_7239)" mask="url(#path-1-inside-1_1086_7239)"></path><defs><linearGradient id="paint0_linear_1086_7239" x1="720" y1="0" x2="720" y2="181" gradientUnits="userSpaceOnUse"><stop stop-color="var(--theme-bg-grediant5-color)"></stop><stop offset="1" stop-color="var(--theme-bg-grediant5-color)" stop-opacity="0"></stop></linearGradient><linearGradient id="paint1_linear_1086_7239" x1="0" y1="90.5" x2="1440" y2="90.5" gradientUnits="userSpaceOnUse"><stop stop-color="var(--theme-bg-grediant5-color)" stop-opacity="0"></stop><stop offset="0.395" stop-color="var(--theme-bg-grediant5-color)"></stop><stop offset="1" stop-color="var(--theme-bg-grediant5-color)" stop-opacity="0"></stop></linearGradient></defs></svg>
+
+
+
+<div class="mx-auto max-w-screen-xl  px-5 py-10">
+
+
+	<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
+		<div class="lg:col-span-4">
+			<h2 class="text-4xl tracking-tight text-black md:text-6xl">Get in Touch <span class="text-theme">with Us</span></h2>
+				<p class="mt-4 text-lg text-black/70 md:text-xl">
+					We will do our best to answer you within 24 hours or less.
+				</p>
+
+
+		</div>
+		<div
+			class="lg:col-span-2"
+		>
+		<!-- <div class="div-ripple"></div> -->
+
+		<div class="mt-10 text-right">
+			<a
+				href={baseUrl}
+				class="focus-visible:shadow-outline-theme rounded-full border-2 border-transparent bg-theme px-7 py-2.5 text-center text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-500 focus-visible:ring-offset-2 btn-down"
+				>Book a Call
+			</a>
+
+		</div>
+
+		</div>
 	</div>
+
+</div>
+
 </div>
