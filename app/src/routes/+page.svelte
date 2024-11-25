@@ -771,7 +771,7 @@
 		style="--gradient-x: {gradientX1}px; --gradient-y: {gradientY1}px;"
 	>
 		<div class="grid md:grid-cols-2">
-			<div class="grid place-items-center py-10">
+			<div class="grid place-items-center  px-5 py-10">
 				<div class="max-w-lg">
 					<span
 						class="border-theme bg-theme-100 text-theme rounded-full border px-3 py-1 text-xs font-medium"
