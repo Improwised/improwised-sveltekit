@@ -40,8 +40,3 @@ jobs:
       - name: Set up base path for deployment
         run: |
           echo "BASE_PATH=/svelte-app" >> $GITHUB_ENV
-
-      # Build command with base path (if applicable)
-      - name: Build with base path (if needed)
-        run: |
-          npm run build -- --base-path=/svelte-app
