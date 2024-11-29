@@ -1,20 +1,35 @@
-name: svelte-astro-app
+name: Svelte-Astro-App
+
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
-concurrency: preview-${{ github.ref }}
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  deploy-preview:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
         with:
-          source-dir: svelte-app
+          path: ./svelte-app
+          node-version: 20.13.1
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
