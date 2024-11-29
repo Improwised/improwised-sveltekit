@@ -1,37 +1,58 @@
-  name: Production
-  
-  on:
-    push:
-      branches:
-        - main
-  
-  jobs:
-    build-and-deploy:
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          shell: bash
-          working-directory: app
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
-  
-        - name: Setup Node.js
-          uses: actions/setup-node@v3
-          with:
-             node-version: 20.13.1
-        
-        - name: Install dependencies
-          run: npm install
-  
-        - name: copy env
-          run: cp .env.production .env
-  
-        - name: Build project
-          run: npm run build
-  
-        - name: Deploy
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./app/build
+name: Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.13.1
+
+      # Build from the main app directory
+      - name: Install dependencies (main)
+        run: |
+          cd app
+          npm install
+
+      - name: Copy environment variables (main)
+        run: |
+          cd app
+          cp .env.production .env
+
+      - name: Build project (main)
+        run: |
+          cd app
+          npm run build
+
+      # Build from the subdirectory
+      - name: Install dependencies (subdirectory)
+        run: |
+          cd app/svelte-app
+          npm install
+
+      - name: Build project (subdirectory)
+        run: |
+          cd app/svelte-app
+          npm run build
+
+      # Deploy step for both builds, adjust as necessary
+      - name: Deploy (main)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app/build # Adjust this path if necessary for the main app output
+
+      - name: Deploy (subdirectory)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app/svelte-app/build # Adjust this path if necessary for the subdirectory output
