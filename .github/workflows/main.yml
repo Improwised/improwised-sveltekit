@@ -8,10 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: app
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -19,19 +15,45 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-           node-version: 20.13.1
-      
-      - name: Install dependencies
-        run: npm install
+          node-version: 20.13.1
 
-      - name: copy env
-        run: cp .env.production .env
+      # Build from the main app directory
+      - name: Install dependencies (main)
+        run: |
+          cd app
+          npm install
 
-      - name: Build project
-        run: npm run build
+      - name: Copy environment variables (main)
+        run: |
+          cd app
+          cp .env.production .env
 
-      - name: Deploy
+      - name: Build project (main)
+        run: |
+          cd app
+          npm run build
+
+      # Build from the subdirectory
+      - name: Install dependencies (svelte-app)
+        run: |
+          cd app/svelte-app
+          npm install
+
+     
+      - name: Build project (svelte-app)
+        run: |
+          cd app/svelte-app
+          npm run build
+
+      # Deploy step for both builds, adjust as necessary
+      - name: Deploy (main)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./app/build
+          publish_dir: ./app/build # Adjust this path if necessary for the main app output
+
+      - name: Deploy (svelte-app)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app/svelte-app/build # Adjust this path if necessary for the subdirectory output
