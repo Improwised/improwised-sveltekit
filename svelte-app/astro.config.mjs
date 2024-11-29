@@ -7,7 +7,6 @@ import svelte from '@astrojs/svelte';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://improwised.github.io',
-    base: 'improwised-sveltekit/svelte-app',
+    site: 'https://improwised.github.io/improwised-sveltekit',
     integrations: [mdx(), sitemap(), svelte()],
 });
