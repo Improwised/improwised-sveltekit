@@ -33,3 +33,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          target-folder: public/svelte-app  # Ensure the subfolder is targeted
