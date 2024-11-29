@@ -25,12 +25,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd ./svelte-app # Change directory to where your Astro app is located
+          cd ./svelte-app
           npm install
 
       - name: Build Astro app
         run: |
-          cd ./svelte-app # Ensure you're in the correct directory
+          cd ./svelte-app
           npm run build
 
       - name: Upload artifact
