@@ -3,31 +3,50 @@ name: Deploy Astro App to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy-astro:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 20.13.1
+          node-version: '20' # Specify the Node.js version
 
-      - name: Install dependencies for Astro
+      - name: Install dependencies
         run: |
-          cd ./svelte-app
+          cd ./svelte-app # Change directory to where your Astro app is located
           npm install
 
       - name: Build Astro app
         run: |
-          cd ./svelte-app
+          cd ./svelte-app # Ensure you're in the correct directory
           npm run build
 
-      - name: Deploy Astro app
-        run: |
-          cd ./svelte-app
-          npm run deploy
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./svelte-app/docs # Path to the built files
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
