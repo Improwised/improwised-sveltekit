@@ -17,21 +17,6 @@ jobs:
         with:
           node-version: 20.13.1
 
-      # Build from the main app directory
-      - name: Install dependencies (main)
-        run: |
-          cd app
-          npm install
-
-      - name: Copy environment variables (main)
-        run: |
-          cd app
-          cp .env.production .env
-
-      - name: Build project (main)
-        run: |
-          cd app
-          npm run build
 
       # Build from the subdirectory
       - name: Install dependencies (svelte-app)
@@ -45,12 +30,6 @@ jobs:
           cd app/svelte-app
           npm run build
 
-      # Deploy step for both builds, adjust as necessary
-      - name: Deploy (main)
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./app/build # Adjust this path if necessary for the main app output
 
       - name: Deploy (svelte-app)
         uses: peaceiris/actions-gh-pages@v3
