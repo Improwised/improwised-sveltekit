@@ -41,7 +41,7 @@
       defaults:
         run:
           shell: bash
-          working-directory: svelte-app
+          working-directory: ./svelte-app
       steps:
         - name: Checkout code
           uses: actions/checkout@v3
@@ -61,4 +61,4 @@
           uses: peaceiris/actions-gh-pages@v3
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./svelte-app/build
+            publish_dir: ./app/build
