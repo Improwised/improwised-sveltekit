@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://improwised.github.io/improwised-sveltekit/svelte-app',
+	site: 'https://improwised.github.io',
+	base: '/improwised-sveltekit/svelte-app'
 	integrations: [mdx(), sitemap()],
 });
