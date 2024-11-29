@@ -34,14 +34,15 @@ jobs:
           npm run build
 
       # Build from the subdirectory
-      - name: Install dependencies (subdirectory)
+      - name: Install dependencies (svelte-app)
         run: |
-          cd svelte-app
+          cd app/svelte-app
           npm install
 
-      - name: Build project (subdirectory)
+     
+      - name: Build project (svelte-app)
         run: |
-          cd svelte-app
+          cd app/svelte-app
           npm run build
 
       # Deploy step for both builds, adjust as necessary
@@ -51,8 +52,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./app/build # Adjust this path if necessary for the main app output
 
-      - name: Deploy (subdirectory)
+      - name: Deploy (svelte-app)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./svelte-app/build # Adjust this path if necessary for the subdirectory output
+          publish_dir: ./app/svelte-app/build # Adjust this path if necessary for the subdirectory output
