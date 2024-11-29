@@ -35,3 +35,13 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           target-folder: ./svelte-app  # Ensure the subfolder is targeted
+
+      # Add a step to set up the base path for GitHub Pages
+      - name: Set up base path for deployment
+        run: |
+          echo "BASE_PATH=/svelte-app" >> $GITHUB_ENV
+
+      # Build command with base path (if applicable)
+      - name: Build with base path (if needed)
+        run: |
+          npm run build -- --base-path=/svelte-app
