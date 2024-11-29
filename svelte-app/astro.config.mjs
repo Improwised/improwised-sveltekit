@@ -5,8 +5,10 @@ import sitemap from '@astrojs/sitemap';
 
 import svelte from '@astrojs/svelte';
 
+import tailwind from '@astrojs/tailwind';
+
 // https://astro.build/config
 export default defineConfig({
     site: 'https://improwised.github.io/improwised-sveltekit',
-    integrations: [mdx(), sitemap(), svelte()],
+    integrations: [mdx(), sitemap(), svelte(), tailwind()],
 });
