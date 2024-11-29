@@ -2,34 +2,36 @@ name: Production
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
-
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches:
+    - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: app
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
-        with:
-          path: ./svelte-app
-          node-version: 20.13.1
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.13.1
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: copy env
+      run: cp .env.production .env
+
+    - name: Build project
+      run: npm run build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./app/build
