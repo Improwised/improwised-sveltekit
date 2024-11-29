@@ -5,7 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://monikagorkhiya.github.io/',
-	base: 'sveltekit-website/svelte-app',
+	site: 'https://improwised.github.io/improwised-sveltekit/svelte-app',
 	integrations: [mdx(), sitemap()],
 });
