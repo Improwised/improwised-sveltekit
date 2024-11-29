@@ -1,5 +1,5 @@
 {
-  "name": "pink-point",
+  "name": "Improwised-Technologies",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,8 +13,10 @@
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/svelte": "^6.0.2",
+    "@astrojs/tailwind": "^5.1.2",
     "astro": "^4.16.16",
     "svelte": "^5.2.10",
+    "tailwindcss": "^3.4.15",
     "typescript": "^5.7.2"
   }
 }
