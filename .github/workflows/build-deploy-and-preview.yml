@@ -24,4 +24,4 @@ jobs:
       - name: Build, Deploy to GitHub Pages and Deploy PR Preview
         uses: chvmvd/build-deploy-and-preview-action@v1.2.0
         with:
-          type: vite
+          type: docusaurus
