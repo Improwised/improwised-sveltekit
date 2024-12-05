@@ -44,13 +44,17 @@ jobs:
       - name: Build Svelte app
         run: npm run build
 
+      # Debug: List build directory
+      - name: List build directory
+        run: ls -la ./version1/dist
+
       # Deploy to GitHub Pages (for pushes to main/master)
       - name: Deploy to GitHub Pages
         if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build # Adjust this if your build output directory differs
+          publish_dir: ./version1/dist
 
       # Deploy PR Preview
       - name: Deploy PR Preview
@@ -58,4 +62,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: ./version1/build # Adjust this if your build output directory differs
+          folder: ./version1/dist
