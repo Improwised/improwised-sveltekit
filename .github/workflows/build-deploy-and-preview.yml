@@ -35,7 +35,7 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./version1/build
+          source-dir: version1
 
       # Optional cleanup step on PR close event 
       - name: Cleanup resources 
