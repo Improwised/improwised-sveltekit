@@ -13,10 +13,6 @@ concurrency: preview-${{ github.ref }}
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: version1
     
     steps:
       - name: Checkout code
@@ -31,8 +27,6 @@ jobs:
         run: npm install
         working-directory: version1
 
-      - name: copy env
-        run: cp .env.production .env
         
       - name: Build the app
         run: npm run build
@@ -41,7 +35,7 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          publish_dir: ./version1/build
+          source-dir: test/build
 
       # Optional cleanup step on PR close event 
       - name: Cleanup resources 
