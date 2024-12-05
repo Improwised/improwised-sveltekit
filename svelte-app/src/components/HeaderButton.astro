@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'a'>;
+
+const { href, class: className = '', ...props } = Astro.props;
+
+// Define the default classes for HeaderButton
+const defaultClasses = "contactusbtn focus-visible:shadow-outline-theme text-md hover:bg-theme focus-visible:ring-theme group inline-flex items-center gap-px rounded-full border-2 px-4 py-2 text-center transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
+---
+
+<a
+    href={href}
+    class:list={[defaultClasses, className]}
+    {...props}
+>
+    <slot />
+</a>
