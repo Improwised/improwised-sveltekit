@@ -20,8 +20,38 @@ jobs:
   build-deploy-and-preview:
     name: Build, Deploy to GitHub Pages and Deploy PR Preview
     runs-on: ubuntu-latest
+
     steps:
-      - name: Build, Deploy to GitHub Pages and Deploy PR Preview
-        uses: chvmvd/build-deploy-and-preview-action@v1.2.0
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          type: docusaurus
+          node-version: 18
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Build the Svelte application
+      - name: Build Svelte app
+        run: npm run build
+
+      # Deploy to GitHub Pages (for pushes to main/master)
+      - name: Deploy to GitHub Pages
+        if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build # Adjust this if your build output directory differs
+
+      # Deploy PR Preview
+      - name: Deploy PR Preview
+        if: ${{ github.event_name == 'pull_request' && github.event.action != 'closed' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build # Adjust this if your build output directory differs
