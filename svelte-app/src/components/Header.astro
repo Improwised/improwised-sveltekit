@@ -17,7 +17,7 @@ import DropdownMenu from "./DropdownMenu.astro";
 		>
 			<div class="flex w-full items-center justify-between lg:w-auto">
 				<HeaderLink
-					href={BASE_URL}
+					href="/"
 					class="logodefault -ml-2 flex items-center px-2 transition"
 				>
 					<Image
@@ -59,15 +59,15 @@ import DropdownMenu from "./DropdownMenu.astro";
 				class="impronav-items impronav-toggle mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto"
 			>
 				<ul class="flex flex-col lg:flex-row lg:gap-3">
-					<HeaderLink href={BASE_URL} class="active">Home</HeaderLink>
-					<HeaderLink href={`${BASE_URL}/`}>About Us</HeaderLink>
+					<HeaderLink href="/"  class="active">Home</HeaderLink>
+					<HeaderLink href="/">About Us</HeaderLink>
 					<DropdownMenu />
-					<HeaderLink href={`${BASE_URL}/`}>Case Studies</HeaderLink>
-					<HeaderLink href={`${BASE_URL}/`}>Careers</HeaderLink>
-					<HeaderLink href={`${BASE_URL}/`}>Blogs</HeaderLink>
+					<HeaderLink href="/">Case Studies</HeaderLink>
+					<HeaderLink href="/">Careers</HeaderLink>
+					<HeaderLink href="/">Blogs</HeaderLink>
 				</ul>
 				<div class="mt-3 flex items-center gap-4 lg:hidden">
-					<HeaderButton href={`${BASE_URL}/`}
+					<HeaderButton href="/"
 						>Contact Us</HeaderButton
 					>
 				</div>
@@ -145,7 +145,7 @@ import DropdownMenu from "./DropdownMenu.astro";
 					</div>
 
 					<a
-						href={BASE_URL}
+						href="/"
 						class="contactusbtn focus-visible:shadow-outline-theme text-md hover:bg-theme focus-visible:ring-theme group inline-flex items-center gap-px rounded-full border-2 px-4 py-2 text-center transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
 					>
 						<span>Contact Us</span>
