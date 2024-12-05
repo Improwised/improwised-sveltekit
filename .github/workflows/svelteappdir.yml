@@ -36,9 +36,11 @@ jobs:
       #   uses: actions/deploy-pages@v4
       #   with:
       #     clean-exclude: pr-preview/
+      - name: test
+        run: pwd && ls -lah
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: version1
+          folder: ./version1
           clean-exclude: pr-preview/
