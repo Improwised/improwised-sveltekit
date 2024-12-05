@@ -1,7 +1,9 @@
 name: Production
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+    - main
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
