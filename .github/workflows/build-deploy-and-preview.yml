@@ -1,4 +1,4 @@
-name: Preview example site
+name: Preview PR
 
 on:
   pull_request:
@@ -13,6 +13,10 @@ concurrency: preview-${{ github.ref }}
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: version1
     
     steps:
       - name: Checkout code
@@ -26,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm install
         working-directory: version1
+
+      - name: copy env
+        run: cp .env.production .env
         
       - name: Build the app
         run: npm run build
@@ -34,7 +41,7 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: version1/build # Adjust if necessary based on your build output directory
+          publish_dir: ./version1/build
 
       # Optional cleanup step on PR close event 
       - name: Cleanup resources 
