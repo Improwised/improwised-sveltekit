@@ -50,7 +50,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build # Adjust this if your build output directory differs
+          publish_dir: ./version1/build # Adjust this if your build output directory differs
 
       # Deploy PR Preview
       - name: Deploy PR Preview
