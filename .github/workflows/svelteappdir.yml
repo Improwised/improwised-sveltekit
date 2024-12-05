@@ -31,8 +31,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
+      #   with:
+      #     clean-exclude: pr-preview/
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
+          branch: gh-pages
+          folder: svelte-app
           clean-exclude: pr-preview/
