@@ -20,6 +20,10 @@ jobs:
   build-deploy-and-preview:
     name: Build, Deploy to GitHub Pages and Deploy PR Preview
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: version1
 
     steps:
       # Checkout the repository
@@ -30,7 +34,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20.13.1
 
       # Install dependencies
       - name: Install dependencies
@@ -54,4 +58,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build # Adjust this if your build output directory differs
+          folder: ./version1/build # Adjust this if your build output directory differs
