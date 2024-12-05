@@ -40,5 +40,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: svelte-app
+          folder: version1
           clean-exclude: pr-preview/
