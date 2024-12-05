@@ -10,6 +10,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://improwised.github.io/improwised-sveltekit/',
+
+    site: 'https://improwised.github.io/',
+    base: 'improwised-sveltekit',
     integrations: [mdx(), sitemap(), svelte(), tailwind()],
 });
