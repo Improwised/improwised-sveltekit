@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'Astro Blog';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const BASE_URL = import.meta.env.VITE_BASE_URL ?? process.env.VITE_BASE_URL

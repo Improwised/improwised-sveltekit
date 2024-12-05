@@ -7,8 +7,9 @@ import svelte from '@astrojs/svelte';
 
 import tailwind from '@astrojs/tailwind';
 
+
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://improwised.github.io/improwised-sveltekit',
+    site: import.meta.env.VITE_BASE_URL ?? process.env.VITE_BASE_URL,
     integrations: [mdx(), sitemap(), svelte(), tailwind()],
 });
