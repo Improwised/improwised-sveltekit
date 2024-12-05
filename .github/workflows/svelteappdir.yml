@@ -37,4 +37,4 @@ jobs:
         with:
           branch: gh-pages
           folder: version1
-          clean-exclude: pr-preview/
+          clean-exclude: /
