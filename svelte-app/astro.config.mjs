@@ -10,6 +10,6 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: import.meta.env.VITE_BASE_URL ?? process.env.VITE_BASE_URL,
+    site: 'improwised.github.io/improwised-sveltekit/',
     integrations: [mdx(), sitemap(), svelte(), tailwind()],
 });
