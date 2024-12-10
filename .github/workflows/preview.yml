@@ -1,23 +1,46 @@
-# .github/workflows/deploy.yml
-name: Deploy PR previews
+name: Deploy PR Previews for Astro App
+
 on:
-  push:
-    branches:
-      - main
   pull_request:
     types:
       - opened
-      - synchronize    
+      - synchronize
+      - reopened
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Deploy PR Preview
-        uses: rossjrw/pr-preview-action@v1.4.3
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      # Setup Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          preview-branch: main
-          source-dir: .
-          umbrella-dir: pr-preview
-          action: auto
+          node-version: 20.13.1
+
+      # Install dependencies and build Astro app
+      - name: Install and build Astro app
+        run: |
+          cd web-app
+          npm install
+          npm run build
+
+      # Deploy to PR Preview
+      - name: Deploy PR Preview
+        uses: withastro/action@v3
+        with:
+          path: ./web-app
+          node-version: 20.13.1
+          deploy-token: ${{ secrets.GITHUB_TOKEN }}
