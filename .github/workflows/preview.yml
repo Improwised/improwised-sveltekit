@@ -33,7 +33,7 @@ jobs:
       # Install dependencies and build Astro app
       - name: Install and build Astro app
         run: |
-          cd web-app
+          cd webapp
           npm install
           npm run build
 
