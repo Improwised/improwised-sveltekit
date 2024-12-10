@@ -3,41 +3,40 @@ name: Preview PR
 on:
   pull_request:
     types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
+    - opened
+    - reopened
+    - synchronize
+    - closed
 
 concurrency: preview-${{ github.ref }}
 
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20.13.1'
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./version1
+    - name: Install dependencies
+      run: npm install
+      working-directory: ./version1
 
-        
-      - name: Build the app
-        run: npm run build
-        working-directory: ./version1
+    - name: Build the app
+      run: npm run build
+      working-directory: ./version1
 
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
-        with:
-          source-dir: version1
+    - name: Deploy preview
+      uses: rossjrw/pr-preview-action@v1
+      with:
+        source-dir: version1
 
-      # Optional cleanup step on PR close event 
-      - name: Cleanup resources 
-        if: github.event.action == 'closed'
-        run: echo "Cleaning up resources..."
+    - name: Deploy preview
+      uses: rossjrw/pr-preview-action@v1
+      with:
+        source-dir: version1/build
+
+    # Optional cleanup step on PR close event
+    - name: Cleanup resources
+      if: github.event.action == 'closed'
+      run: echo "Cleaning up resources..."
