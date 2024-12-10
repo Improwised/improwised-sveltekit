@@ -1,0 +1,42 @@
+---
+export interface CardProps {
+  title?: string;
+  description?: string;
+  icon?: string; // SVG icon as HTML string
+}
+
+// Default props
+const { title = "Card Title", description = "Card Description", icon = "" } = Astro.props;
+
+// Variables to manage gradient position
+let gradientX = 45.5;
+let gradientY = -200;
+
+
+---
+
+<!-- Astro Component Markup -->
+<div
+  class="card-custom flex flex-col items-center text-center shadow-lg p-6 bg-white relative overflow-hidden"
+  onmousemove="updateGradient(event)"
+  style={`--gradient-x: ${gradientX}px; --gradient-y: ${gradientY}px;`}
+>
+  <div class="icon-container mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg">
+    {icon && <div set:html={icon}></div>}
+  </div>
+  <h3 class="text-xl font-semibold">{title}</h3>
+  <p class="mt-2 text-gray-600">{description}</p>
+</div>
+<script is:inline>
+  // Function to update gradient position
+function updateGradient(event) {
+  const rect = (event.currentTarget).getBoundingClientRect();
+  gradientX = event.clientX - rect.left;
+  gradientY = event.clientY - rect.top;
+
+  // Update the style dynamically
+  const target = event.currentTarget;
+  target.style.setProperty('--gradient-x', `${gradientX}px`);
+  target.style.setProperty('--gradient-y', `${gradientY}px`);
+}
+</script>
