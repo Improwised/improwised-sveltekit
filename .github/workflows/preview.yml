@@ -1,0 +1,59 @@
+name: PR Preview
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Use Astro's GitHub Action to install dependencies and build the project
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
+        with:
+          path: ./webapp
+          node-version: 22.0.0
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      # Deploy the built site to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Generate the preview URL
+      - name: Generate preview URL
+        run: echo "PR Preview URL"
+        env:
+          DEPLOY_URL: ${{ steps.deployment.outputs.page_url }}
+
+      # Comment on the PR with the preview link
+      - name: Comment on PR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const url = process.env.DEPLOY_URL;
+            const prNumber = context.payload.pull_request.number;
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: `🚀 PR Preview is available at: [${url}](${url})`,
+            });
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
