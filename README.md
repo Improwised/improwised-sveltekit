@@ -11,6 +11,10 @@ Link : https://improwised.github.io/improwised-sveltekit/
 - I built this using SvelteKit and Tailwind CSS,
 - Using this theme as a base: https://web3templates.com/templates/astroship-pro-astro-saas-website-template
 
+## LightHouse Score 
+![image](https://github.com/user-attachments/assets/e1e369a7-cfac-4d30-9174-2afa1e248bbd)
+
+
 ##  Doc Here :
 https://wiki.improwised.com/doc/svelte4-vs-svelte-5-UU1j7BjLEl
 
